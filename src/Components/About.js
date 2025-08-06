@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'aos/dist/aos.css';
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaBirthdayCake, FaGraduationCap } from 'react-icons/fa';
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaBirthdayCake } from 'react-icons/fa';
 import AOS from 'aos';
 import React, { useEffect } from 'react';
 
@@ -8,12 +8,6 @@ const About = () => {
   useEffect(() => {
     AOS.init({ duration: 1200 });
   }, []);
-  // useEffect(() => {
-  //     AOS.init({
-  //       duration: 1200,
-  //       offset: 300, 
-  //     });
-  //   }, []);
 
   return (
     <section id="about" className="about-section">
@@ -28,7 +22,7 @@ const About = () => {
 
           {/* Profile Info */}
           <div className="row align-items-center">
-            <div className="col-md-4 text-center mb-4 mb-md-0" data-aos="zoom-in">
+            <div className="col-12 col-md-4 text-center mb-4">
               <img
                 src="/portfolio-Photoroom.jpg"
                 className="img-fluid rounded-circle shadow"
@@ -36,7 +30,7 @@ const About = () => {
                 style={{ width: '230px', height: '230px', objectFit: 'cover' }}
               />
             </div>
-            <div className="col-md-8" data-aos="fade-left">
+            <div className="col-12 col-md-8" data-aos="fade-left">
               <h4 className="fw-bold mb-3 text-primary">I'm Allen Darson C</h4>
               <p>
                 👋 I'm a <strong>2023 graduate</strong> passionate about full-stack and SQL development.<br />
@@ -66,32 +60,34 @@ const About = () => {
           <div className="timeline-container mt-5">
             <h2 className="text-center text-primary mb-5">🎓 Education</h2>
             <div className="timeline">
-              <div className="timeline-item left" data-aos="fade-right">
+
+              <div className="timeline-item left w-100 d-flex flex-column align-items-start" data-aos="fade-right">
                 <div className="timeline-dots"></div>
-                <div className="timeline-card">
+                <div className="timeline-card p-3 p-md-4">
                   <h5>B.E. in Mechanical Engineering</h5>
                   <p>Sri Ramakrishna Engineering College</p>
                 </div>
                 <div className="timeline-date">2019 - 2023</div>
               </div>
 
-              <div className="timeline-item right" data-aos="fade-left">
+              <div className="timeline-item right w-100 d-flex flex-column align-items-start" data-aos="fade-left">
                 <div className="timeline-dot"></div>
-                <div className="timeline-card">
+                <div className="timeline-card p-3 p-md-4">
                   <h5>Higher Secondary Certificate (HSC)</h5>
                   <p>GRG Matric Higher Secondary School</p>
                 </div>
                 <div className="timeline-date">2018 - 2019</div>
               </div>
 
-              <div className="timeline-item left" data-aos="fade-right">
+              <div className="timeline-item left w-100 d-flex flex-column align-items-start" data-aos="fade-right">
                 <div className="timeline-dots"></div>
-                <div className="timeline-card">
+                <div className="timeline-card p-3 p-md-4">
                   <h5>Secondary School Leaving Certificate (SSLC)</h5>
                   <p>GRG Matric Higher Secondary School</p>
                 </div>
                 <div className="timeline-date">2016 - 2017</div>
               </div>
+
             </div>
           </div>
 
@@ -100,4 +96,5 @@ const About = () => {
     </section>
   );
 };
+
 export default About;
